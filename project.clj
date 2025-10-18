@@ -8,14 +8,15 @@
                                     :username :env/clojars_user
                                     :password :env/clojars_pass}]]
 
-  :dependencies [[org.clojure/clojure "1.12.1"]
-                 [org.clojars.jj/majavat "1.12.0"]]
+  :dependencies [[org.clojure/clojure "1.12.3"]
+                 [org.clojars.jj/majavat "1.12.2"]]
 
   :profiles {:test {:global-vars    {*warn-on-reflection* true}
                     :dependencies   [[ch.qos.logback/logback-classic "1.5.19"]]
                     :resource-paths ["test/resources"]}}
 
   :plugins [[org.clojars.jj/bump "1.0.4"]
+            [lein-ancient "0.7.0"]
             [org.clojars.jj/strict-check "1.1.0"]
             [org.clojars.jj/bump-md "1.1.0"]]
 

@@ -1,7 +1,7 @@
 # majavat-file-renderer
-Majavat file renderer is an extension for Majavat templating engine that allows storing compiled template in a file ona  file system
+Majavat file renderer is an extension for Majavat templating engine to save output in a file.
 
-## Installaiton
+## Installation
 
 
 Add majavat to dependency list
@@ -23,7 +23,7 @@ foo-{{bar}}-baz
 
 ## License
 
-Copyright © 2025 FIXME
+Copyright © 2025 [ruroru](https://github.com/ruroru)
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
