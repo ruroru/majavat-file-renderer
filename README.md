@@ -2,8 +2,6 @@
 Majavat file renderer is an extension for Majavat templating engine to save output in a file.
 
 ## Installation
-
-
 Add majavat file renderer to dependency list
 
 ```clojure
@@ -16,8 +14,21 @@ given `input-file`
 ```
 foo-{{bar}}-baz
 ```
+
+```clojure
+(:require [jj.majavat.renderer.file-renderer :as fr])
+
+(let [template-path "/path/to/template"
+      context {:bar "qaz"}
+      output-file-path "./expected/file.txt"]
+  (fr/render-file template-path context output-file-path))
+```
+
+or for more fine-grained control
+
 ```clojure
 (def  render-fn (majavat/render "input-file" {:renderer (->FileRenderer "./expected/file.txt" {})}))
+
 (render-fn {:bar "qaz"}) ;; writes  foo-qaz-baz to "./expected/file.txt"
 ```
 
