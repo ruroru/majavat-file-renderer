@@ -1,4 +1,4 @@
-(defproject org.clojars.jj/majavat-file-renderer "1.0.1"
+(defproject org.clojars.jj/majavat-file-renderer "1.0.2-SNAPSHOT"
   :description "Majavat file renderer is an extension for Majavat templating engine to save output in a file.\n"
   :url "https://github.com/ruroru/majavat-file-renderer"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
