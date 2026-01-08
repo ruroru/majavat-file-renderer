@@ -5,7 +5,7 @@ Majavat file renderer is an extension for Majavat templating engine to save outp
 Add majavat file renderer to dependency list
 
 ```clojure
-[org.clojars.jj/majavat-file-renderer "1.0.1"]
+[org.clojars.jj/majavat-file-renderer "1.0.2"]
 ```
 
 ## Usage
