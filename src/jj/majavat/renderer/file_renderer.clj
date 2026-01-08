@@ -4,12 +4,13 @@
             [jj.majavat.renderer :refer [->InputStreamRenderer Renderer render]])
   (:import (java.io File InputStream)))
 
-(defrecord FileRenderer [output-file-path config]
+(defrecord FileRenderer [output-file-path]
   Renderer
-  (render [this template context]
+  (render [this template context sanitizer]
     (let [^File output-file (io/file output-file-path)
-          stream-renderer (->InputStreamRenderer (:config this))
-          ^InputStream content-stream (render stream-renderer template context)]
+
+          stream-renderer (->InputStreamRenderer)
+          ^InputStream content-stream (render stream-renderer template context sanitizer)]
 
       (io/make-parents output-file)
 
@@ -19,5 +20,5 @@
       output-file)))
 
 (defn render-file [template-path context output-file-path]
-  (let [redner-fn (majavat/build-renderer template-path {:renderer (->FileRenderer output-file-path {})})]
-    (redner-fn context)))
+  (let [render-fn (majavat/build-renderer template-path {:renderer (->FileRenderer output-file-path)})]
+    (render-fn context)))
