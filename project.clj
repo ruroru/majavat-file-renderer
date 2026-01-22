@@ -9,7 +9,7 @@
                                     :password :env/clojars_pass}]]
 
   :dependencies [[org.clojure/clojure "1.12.4"]
-                 [org.clojars.jj/majavat "1.18.0"]]
+                 [org.clojars.jj/majavat "1.19.0"]]
 
   :profiles {:test {:global-vars    {*warn-on-reflection* true}
                     :dependencies   [[ch.qos.logback/logback-classic "1.5.25"]]
