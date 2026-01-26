@@ -12,7 +12,7 @@
                  [org.clojars.jj/majavat "1.19.0"]]
 
   :profiles {:test {:global-vars    {*warn-on-reflection* true}
-                    :dependencies   [[ch.qos.logback/logback-classic "1.5.25"]]
+                    :dependencies   [[ch.qos.logback/logback-classic "1.5.26"]]
                     :resource-paths ["test/resources"]}}
 
   :plugins [[org.clojars.jj/bump "1.0.4"]
