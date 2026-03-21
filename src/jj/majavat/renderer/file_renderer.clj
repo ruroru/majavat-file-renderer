@@ -1,16 +1,17 @@
 (ns jj.majavat.renderer.file-renderer
   (:require [clojure.java.io :as io]
             [jj.majavat :as majavat]
-            [jj.majavat.renderer :refer [->InputStreamRenderer RenderTarget render]])
+            [jj.majavat.protocol.renderer.render-target :as render-target]
+            [jj.majavat.renderer :refer [->InputStreamRenderer]])
   (:import (java.io File InputStream)))
 
 (defrecord FileRenderer [output-file-path]
-  RenderTarget
+  render-target/RenderTarget
   (render [this template context sanitizer]
     (let [^File output-file (io/file output-file-path)
 
           stream-renderer (->InputStreamRenderer)
-          ^InputStream content-stream (render stream-renderer template context sanitizer)]
+          ^InputStream content-stream (render-target/render stream-renderer template context sanitizer)]
 
       (io/make-parents output-file)
 
