@@ -8,7 +8,7 @@
                                     :username :env/clojars_user
                                     :password :env/clojars_pass}]]
 
-  :dependencies [[org.clojure/clojure "1.12.4"]
+  :dependencies [[org.clojure/clojure "1.12.5"]
                  [org.clojars.jj/majavat "2.0.1"]]
 
   :profiles {:test {:global-vars    {*warn-on-reflection* true}
